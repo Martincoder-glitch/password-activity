@@ -40,6 +40,10 @@ def update():
                 fruits.remove(fruit)
                 score +=1  
                 fruits=[]  
+def on_mouse_down(pos):
+    global game
+    if game==True:
+        animate(goku,pos=pos,angle=goku.angle_to(pos)-90,duration=1)
 clock.schedule_interval(make_fruit,1)
 
 
